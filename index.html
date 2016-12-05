@@ -1,61 +1,209 @@
 <!DOCTYPE html>
 <head>
-    <title>Pizza Form</title>
-	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-    <link href="styles/theme.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script> 
-    <script type="text/javascript" src="js/pizzacalc.js"></script>
-	
+<link href="styles/theme.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.js"integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="crossorigin="anonymous"></script>
+<title>Pizza Form</title>
 </head>
 <body>
-<h1 style="text-align: center;">Untangling the Cheese</h1>
-<h2 style="text-align: center;">Victoria's Cheesiest Pizza</h2>
+<div class="jumbotron">
+        <h1 id = title >Untangling the Cheese</h1>
+        <h2 id = catchphrase >Victoria's Cheesiest Pizza</h2>
+      </div>
+
+<div class="container">
 <p>&nbsp;</p>
-<p><img style = "center" src="imgs/pizza.png" alt"="pizza" width="280" height="140" /></p>
+<p><img style = "center" class="img-rounded" src="imgs/pizza.png" alt ="pizza" width="280" height="200" /></p>
 <p>&nbsp;</p>
+<div class="container">
 <h3 style="text-align: left;">Ingredients:</h3>
-<table style="height: 234px; float: left;" border="2" width="207">
-<tbody>
-<tr>
-<td>Gouda</td>
-<td>$2.00</td>
-</tr>
-<tr>
-<td>Cheddar</td>
-<td>$2.00</td>
-</tr>
-<tr>
-<td> Mozzarella</td>
-<td>$1.00</td>
-</tr>
-<tr>
-<td>Blue</td>
-<td>$4.00</td>
-</tr>
-<tr>
-<td>Feta</td>
-<td>$2.00</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<div class="bs-example">
+<!-- Trigger the plain cheese modal with a button -->
+<button type="button" class="btn" data-toggle="modal" data-target="#plainModal">Plain</button>
+<!-- Plain Modal -->
+<div id="plainModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
-<h2> Order Form</h2>
-    <form >
-        <div class="form-group">
-    <label for="topping">Toppings</label>
-</form>
- <input class="form-control" id="topping" type="text">
+    <!-- Plain Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Plain no extra charge</h4>
+      </div>
+      <div class="modal-body">
+        <p>Just a plain old pizza.  I'd suggest getting some cheese as you are looking at Victoria's Cheesiest Pizza</p>
+        <img src="imgs/plainpizza.jpg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
   </div>
+</div>
+
+<!-- Trigger the gouda cheese modal with a button -->
+<button type="button" class="btn" data-toggle="modal" data-target="#goudaModal">Gouda</button>
+<!-- Plain Modal -->
+<div id="goudaModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- gouda Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Gouda + $2</h4>
+      </div>
+      <div class="modal-body">
+        <p>Gouda, or "How-da" as the locals say, is a Dutch cheese named after the city of Gouda in the Netherlands. If truth be told, it is one of the most popular cheeses in the world, accounting for 50 to 60 percent of the world's cheese consumption. It is a semi-hard cheese celebrated for its rich, unique flavour and smooth texture.</p>
+        <img src="imgs/gouda.jpg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Trigger the cheddar cheese modal with a button -->
+<button type="button" class="btn" data-toggle="modal" data-target="#cheddarModal">Cheddar</button>
+<!-- Plain Modal -->
+<div id="cheddarModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- cheddar Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cheddar + $3</h4>
+      </div>
+      <div class="modal-body">
+        <p>Cheddar cheese, the most widely purchased and eaten cheese in the world is always made from cow's milk. It is a hard and natural cheese that has a slightly crumbly texture if properly cured and if it is too young, the texture is smooth. It gets a sharper taste as it matures, over a period of time between 9 to 24 months.</p>
+        <img src="imgs/cheddar.jpg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+   
+<!-- Trigger the mozerella cheese modal with a button -->
+<button type="button" class="btn" data-toggle="modal" data-target="#mozarellaModal">Mozzarella</button>
+<!-- Plain Modal -->
+<div id="mozarellaModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- mozerella Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Mozzarella + $1</h4>
+      </div>
+      <div class="modal-body">
+        <p>Mozzarella cheese is a sliceable curd cheese originating in Italy. Traditional Mozzarella cheese is made from milk of water buffalos herded in very few countries such as Italy and Bulgaria. As a result, most of the Mozzarella cheeses available now are made from cow's milk.</p>
+        <img src="imgs/mozzarella.jpg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>   
+    
+<!-- Trigger the blue cheese modal with a button -->
+<button type="button" class="btn" data-toggle="modal" data-target="#blueModal">Blue</button>
+<!-- blue Modal -->
+<div id="blueModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- blue Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Blue Cheese + $4</h4>
+      </div>
+      <div class="modal-body">
+        <p>Blue Vein cheeses also called Blue cheese is a generic term used to describe cheese produced with cow's milk, sheep's milk, or goat's milk and ripened with cultures of the mold Penicillium. The final product is characterized by green, grey, blue or black veins or spots of mold throughout the body. These veins are created during the production stage when cheese is 'spiked' with stainless steel rods to let oxygen circulate and encourage the growth of the mold. This process also softens the texture and develops the distinctive blue flavour.</p>
+        <img src="imgs/blue.jpg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>   
+  
+  <!-- Trigger the Feta cheese modal with a button -->
+<button type="button" class="btn" data-toggle="modal" data-target="#fetaModal">Feta</button>
+<!-- Plain Modal -->
+<div id="fetaModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- blue Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Feta Cheese + $2</h4>
+      </div>
+      <div class="modal-body">
+        <p>Feta is a pickled curd cheese that has a salty and tangy taste enhanced by the brine solution.</p>
+        <img src="imgs/feta.jpg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div> 
 
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+<input type="text" id="myTextField"/>
+<input class="btn-warning" type="submit" id="byBtn" value="Update Price" onclick="totalPriceOutput()"/>
+<h1 style="text-align: left">Total Price</h1>
+<h4 id="toppings"></h4>
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="myModalChange()">Submit Order<span class="glyphicon glyphicon-shopping-cart"></span></button>
 
-<input onClick= "thanks()" type="submit" value="Place Order" >
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="myVar">Please select toppings</p>
+        <img src="imgs/pizzacat.gif" alt="Thumbs Up" width="200" height="200"/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ">Close</button>
+      </div>
+    </div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div>
+<h3 id = "locations">Store Locations</h3>
+  <div id="map"></div>
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyDCcM3AvP8PtN2raeuRsIlTjAn1LE3Tc8w"></script>
+<script type="text/javascript" src="js/pizzacalc.js"></script>
+</div>
 </body>
